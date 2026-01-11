@@ -42,10 +42,10 @@ import struct Foundation.UUID
 /// }
 /// ```
 public struct GenerationID: Sendable, Hashable, Codable {
-    private let uuid: UUID
+  private let uuid: UUID
 
-    /// Create a new, unique `GenerationID`.
-    public init() {
-        self.uuid = UUID()
-    }
+  /// Create a new, unique `GenerationID`.
+  public init() {
+    self.uuid = UUID()
+  }
 }

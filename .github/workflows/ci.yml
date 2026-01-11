@@ -13,12 +13,13 @@ permissions:
 jobs:
   test-macos:
     name: Swift ${{ matrix.swift }} on macOS ${{ matrix.macos }} with Xcode ${{ matrix.xcode }}
-    runs-on: macos-${{ matrix.macos }}
+    runs-on: ${{ matrix.os }}
     env:
       DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer"
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-latest]
         include:
           - macos: "15"
             swift: "6.1"
@@ -49,10 +50,11 @@ jobs:
 
   test-linux:
     name: Swift ${{ matrix.swift-version }} on Linux
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-latest]
         swift-version:
           - 6.1.0
     timeout-minutes: 10
