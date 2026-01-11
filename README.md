@@ -340,7 +340,7 @@ Enable the trait in Package.swift:
 )
 ```
 
-### llama.cpp (GGUF)
+### `llama.cpp` (GGUF)
 
 Run GGUF quantized models via [llama.cpp](https://github.com/ggml-org/llama.cpp)
 (requires `Llama` trait):
