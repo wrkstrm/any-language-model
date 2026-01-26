@@ -7,7 +7,7 @@ import PackageDescription
 let package = Package(
   name: "AnyLanguageModel",
   platforms: [
-    .macOS(.v14),
+    .macOS(.v15),
     .macCatalyst(.v17),
     .iOS(.v17),
     .tvOS(.v17),
@@ -87,3 +87,4 @@ let package = Package(
     ),
   ]
 )
+
